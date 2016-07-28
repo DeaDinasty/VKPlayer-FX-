@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <Pane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="32.0">
+            <children>
+                <MenuBar layoutY="3.0" prefHeight="30.0" prefWidth="1000.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <ToggleButton layoutX="890.0" layoutY="3.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="White style" />
+            </children>
+            <BorderPane.margin>
+                <Insets right="1.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets right="1.0" />
+            </padding>
+        </Pane>
+    </top>
+    <left>
+        <Pane maxHeight="-Infinity" prefHeight="610.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" hmax="0.0" layoutY="27.0" maxHeight="-Infinity" prefHeight="590.0" prefWidth="300.0" vmax="0.0" />
+                <Text fontSmoothingType="LCD" layoutX="127.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MUSIC">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+    </left>
+    <center>
+        <Pane prefHeight="618.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+            <children>
+                <TabPane prefHeight="618.0" prefWidth="640.0" tabMaxWidth="170.0">
+                    <tabs>
+                        <Tab closable="false" text="Tab">
+                            <content>
+                                <TableView fx:id="tableView" minWidth="-Infinity" prefHeight="410.0" prefWidth="448.0">
+                                    <columns>
+                              <TableColumn fx:id="numColumn" maxWidth="55.0" minWidth="30.0" prefWidth="35.0" text="№" />
+                                        <TableColumn fx:id="nameColumn" maxWidth="350.0" minWidth="180.0" prefWidth="205.0" text="Name" />
+                                        <TableColumn fx:id="artistColumn" maxWidth="170.0" minWidth="125.0" prefWidth="150.0" text="Artist" />
+                              <TableColumn fx:id="albumColumn" maxWidth="170.0" minWidth="125.0" prefWidth="150.0" text="Album" />
+                                        <TableColumn fx:id="timeColumn" maxWidth="120.0" minWidth="80.0" prefWidth="100.0" text="Time" />
+                                    </columns>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                                </TableView>
+                            </content></Tab>
+                  <Tab closable="false" text="Playlist">
+                     <content>
+                        <TableView fx:id="tableView2" minWidth="-Infinity" prefHeight="410.0" prefWidth="448.0">
+                           <columns>
+                              <TableColumn fx:id="numColumn1" maxWidth="55.0" minWidth="30.0" prefWidth="35.0" text="№" />
+                              <TableColumn fx:id="nameColumn2" maxWidth="240.0" minWidth="180.0" prefWidth="205.0" text="Name" />
+                              <TableColumn fx:id="artistColumn2" maxWidth="170.0" minWidth="125.0" prefWidth="150.0" text="Artist" />
+                              <TableColumn fx:id="albumColumn1" maxWidth="170.0" minWidth="125.0" prefWidth="150.0" text="Album" />
+                              <TableColumn fx:id="timeColumn2" maxWidth="120.0" minWidth="80.0" prefWidth="100.0" text="Time" />
+                           </columns>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </TableView>
+                     </content>
+                  </Tab>
+                    </tabs>
+                    <padding>
+                        <Insets left="-7.0" top="-5.0" />
+                    </padding>
+                </TabPane>
+            </children>
+        </Pane>
+    </center>
+    <right>
+        <Pane maxHeight="-Infinity" prefHeight="618.0" prefWidth="60.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0">
+                    <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                            <image>
+                                <Image url="@res/refresh.png" />
+                            </image>
+                     <effect>
+                        <InnerShadow blurType="GAUSSIAN" choke="0.25" color="#d3e114" height="24.04" radius="6.01" width="2.0" />
+                     </effect>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button contentDisplay="CENTER" graphicTextGap="0.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0">
+                    <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                            <image>
+                                <Image url="@res/search_1.png" />
+                            </image>
+                     <effect>
+                        <Glow level="0.8" />
+                     </effect>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button contentDisplay="CENTER" graphicTextGap="0.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0">
+                    <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                            <image>
+                                <Image url="@res/folder.png" />
+                            </image>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#6d05ff" height="27.07" radius="12.34" spread="0.24" width="24.29" />
+                     </effect>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button contentDisplay="CENTER" graphicTextGap="0.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0">
+                    <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                            <image>
+                                <Image url="@res/settings.png" />
+                            </image>
+                     <effect>
+                        <Glow level="0.8" />
+                     </effect>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            <Button fx:id="convertButton" contentDisplay="CENTER" disable="true" graphicTextGap="0.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#action_convert" prefHeight="60.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@res/go.png" />
+                     </image>
+                     <effect>
+                        <Glow level="0.8" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            </children></Pane>
+    </right>
+    <bottom>
+        <Pane prefHeight="50.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+            <children>
+                <ProgressBar fx:id="progressBar" layoutX="303.0" layoutY="10.0" prefHeight="30.0" prefWidth="585.0" progress="0.0">
+                    <padding>
+                        <Insets bottom="5.0" />
+                    </padding>
+                </ProgressBar>
+                <Text fx:id="progressText" layoutX="582.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                <Button fx:id="search_da0" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#action_search_da0" prefHeight="52.0" prefWidth="80.0">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                            <image>
+                                <Image url="@res/search_2.png" />
+                            </image>
+                     <effect>
+                        <Glow level="0.8" />
+                     </effect>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="2.0" />
+                    </padding>
+                </Button>
+                <Button contentDisplay="CENTER" graphicTextGap="0.0" layoutX="940.0" layoutY="-10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                            <image>
+                                <Image url="@res/off.png" />
+                            </image>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#e82929" height="14.93" radius="14.555" spread="0.63" width="45.29" />
+                     </effect>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button contentDisplay="CENTER" graphicTextGap="0.0" layoutX="83.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                            <image>
+                                <Image url="@res/vk.jpg" />
+                            </image>
+                     <effect>
+                        <MotionBlur angle="307.32" radius="0.78" />
+                     </effect>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="2.0" />
+                    </padding>
+                </Button>
+                <Button contentDisplay="CENTER" graphicTextGap="0.0" layoutX="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="52.0" prefWidth="133.0">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                            <image>
+                                <Image url="@res/soundcloud_v2.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="2.0" />
+                    </padding>
+                </Button>
+            </children>
+        </Pane>
+    </bottom>
+</BorderPane>
